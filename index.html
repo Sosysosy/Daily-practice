@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#round1{
+				background-image:linear-gradient( 180deg,#9c0002,rgba(220,20,60,0));
+				height: 100px;
+				width: 50px;
+				border-top-left-radius:50px ;
+				border-bottom-left-radius:50px ;
+				}
+          body{
+			  display: flex;
+	             background-color: #000000;
+				 justify-content: center;
+				 align-items: center;
+				 min-height: 100vh;
+             }
+			 #roundlight{
+				 width: 10px;
+				 height: 10px;
+				 background-color: red;
+				 position: absolute;
+				 margin-left: 44px;
+				 border-radius: 5px;
+				 box-shadow:0 0 10px 3px rgba(255,0,0,0.8) ,0 0 50px 13px rgba(255,0,0,0.8);
+			 }
+			 #round2{
+				 position: absolute;
+				 width: 80px;
+				 height: 80px;
+				 background-color: black;
+				 border-radius: 40px;
+				 margin-top: 10px;
+				 margin-left:10px ;
+			 }
+			 #biground{
+				 animation: myround 2s linear infinite;
+			 }
+			 @keyframes myround{
+			 	from{transform: rotate(0deg);}
+			 	to{transform: rotate(360deg);}
+			 } 
+			 #biground{
+				 background-color: black;
+				 height: 100px;
+				 width: 100px;
+				 border-radius: 50px;
+				 
+			 }
+			 
+			 
+			 
+			 #round1two{
+			 				background-image:linear-gradient( 180deg,#0000ff,rgba(0, 0, 255, 0.0));
+			 				height: 50px;
+			 				width: 25px;
+			 				border-top-left-radius:50px ;
+			 				border-bottom-left-radius:50px ;
+			 				}
+			
+			 			 #roundlighttwo{
+			 				 width: 7px;
+			 				 height: 7px;
+			 				 background-color: blue;
+			 				 position: absolute;
+			 				 margin-left: 20px;
+			 				 border-radius: 5px;
+			 				 box-shadow:0 0 10px 3px rgba(0, 0, 255, 0.8) ,0 0 50px 13px rgba(0,0,255,0.8),0 0 25px 7px rgba(0,0,255,0.8);
+			 			 }
+			 			 #round2two{
+			 				 position: absolute;
+			 				 width: 40px;
+			 				 height: 40px;
+			 				 background-color: black;
+			 				 border-radius: 40px;
+			 				 margin-top: 5px;
+			 				 margin-left:5px ;
+			 			 }
+			 			 #biground2{
+			 				 animation: myround2 20s linear infinite;
+			 			 }
+			 			 @keyframes myround2{
+			 			 	0%{transform: rotate(0deg);}
+			 			 	
+			 			 	100%{transform: rotate(360deg);}
+			 			 } 
+			 			 #biground2{
+			 				 background-color: black;
+			 				 height: 50px;
+			 				 width: 50px;
+			 				 border-radius: 50px;
+			 				 margin-top: 15px;
+							 margin-left: 15px;
+			 			 }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="biground">
+		<div id="round1">
+			<div id="round2"><div id="biground2">
+		<div id="round1two">
+			<div id="round2two"></div>
+			<div id="roundlighttwo"></div>
+			
+		</div>
+		</div></div>
+			<div id="roundlight"></div>
+			
+		</div>
+		
+		</div>
+		
+	</body>
+</html>
