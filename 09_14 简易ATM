@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //里面现存有100元钱。
+        //如果存钱，就用输入钱数加上先存的钱数，之后弹出显示余额提示框。
+        //如果取钱，就减去取的钱数，之后弹出显示余额提示框。
+        //如果显示余额，就输出余额。
+        //如果推出，弹出退出信息提示框。
+        var slt = '1.存钱\n2.取钱\n3.查询余额\n4.退出';
+        var select = prompt(slt);
+        var money = 100;
+        while (select != 4) {
+            if (select == 1) {
+                var add = prompt('存多少？');
+                money += parseFloat(add);
+                alert('您的余额为：' + money);
+                select = prompt(slt);
+                continue;
+            } if (select == 2) {
+                var qu = prompt('取多少？');
+                if (qu > money) {
+                    alert('您的余额不足！');
+                    select = prompt(slt);
+                    continue;
+                }
+                money -= parseFloat(qu);
+                alert('您的余额为：' + money);
+                select = prompt(slt);
+                continue;
+            } else {
+                alert('您的余额为：' + money);
+                select = prompt(slt);
+                continue;
+            }
+        }
+        alert('退出成功！');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
