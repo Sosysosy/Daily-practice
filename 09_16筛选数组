@@ -8,8 +8,9 @@
     <title>Document</title>
     <script>
         //将数组[2,0,6,1,77,0,52,0,25,7]中大于等于10的元素选出来，放入新数组。
-        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
-        var newarr = [];
+        // var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        // var newarr = [];
+
         //法1
         // var j = 0;
         // for (var i = 0; i < arr.length; i++) {
@@ -18,13 +19,47 @@
         //         j++;
         //     }
         // }
+
         //法2
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] >= 10) {
-                newarr[newarr.length] = arr[i];
-            }
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (arr[i] >= 10) {
+        //         newarr[newarr.length] = arr[i];
+        //     }
+        // }
+        //     console.log(newarr);
+
+        //将数组[2,0,6,1,77,0,52,0,25,7]中的0去掉后，形成一个不包含0的新数组。
+        // var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        // var newArr = [];
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (arr[i] !== 0) {
+        //       newArr[newArr.length]=arr[i];
+        //     }
+        // }
+        // console.log(newArr);
+
+        //翻转数组
+        //将数组['red','green','blue','pink','purple']的内容翻转过来存放。
+        var arr = ['red', 'green', 'blue', 'pink', 'purple'];
+        //法1
+        // var i = 0;
+        // var j = arr.length - 1;
+        // var store = '';
+        // while (i != j) {
+        //    store=arr[i];
+        //    arr[i]=arr[j];
+        //    arr[j]=store;
+        //    i++;
+        //    j--;
+        // }
+        // console.log(arr);
+
+        //法2
+        var newArr = [];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            newArr[newArr.length] = arr[i];
         }
-            console.log(newarr);
+        console.log(newArr);
     </script>
 </head>
 
