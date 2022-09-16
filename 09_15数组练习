@@ -8,24 +8,25 @@
     <title>Document</title>
     <script>
         //定义一个数组，里面存放星期一~星期日（共七天），在控制台输出：星期日。
-        var arr = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'];
-        var long = arr.length - 1;
-        console.log(arr[long]);
-        console.log(arr[6]);
+        // var arr = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'];
+        // var long = arr.length - 1;
+        // console.log(arr[long]);
+        // console.log(arr[6]);
         //遍历数组
-        for (var i = 0; i <= 6; i++) {
-            console.log(arr[i]);
-
-            //求数组和及平均值
-            //求数组[2，6，1，7，4]里面所有元素的和以及平均值。
-            var arr = [2, 6, 1, 7, 4];
-            var sum = 0;
-            for (var i = 0; i < arr.length; i++) {
-                sum += arr[i];
-            }
-            console.log('数组所有元素和为：' + sum);
-            console.log('平均值为:' + sum / arr.length);
+        // for (var i = 0; i <= 6; i++) {
+        //     console.log(arr[i]);
+        // }
+        
+        //求数组和及平均值
+        //求数组[2，6，1，7，4]里面所有元素的和以及平均值。
+        var arr = [2, 6, 1, 7, 4];
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
         }
+        console.log('数组所有元素和为：' + sum);
+        console.log('平均值为:' + sum / arr.length);
+
     </script>
 </head>
 
