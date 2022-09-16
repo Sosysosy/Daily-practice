@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.求[2,6,1,77,52,25,7]中的最大值。
+        // var arr = [2, 6, 1, 77, 52, 25, 7];
+        // var max = 0;
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (arr[i + 1] > arr[i]) {
+        //         max = arr[i + 1];
+        //     }
+        // }
+        // console.log('最大值为：'+max);
+
+        //2.将数组转换为字符串，并且用|分割开。
+        // var arr = ['red', 'green', 'blue', 'pink'];
+        // var color = '';
+        // for (var i = 0; i < arr.length; i++) {
+        //     color += arr[i];
+        //     color += '|';
+        // }
+        // console.log(color);
+
+
+        // arr.length = 6;  //扩容
+        // arr[4] = 'black';  //追加
+        // arr[0] = 'yellow';  //替换
+
+        //3.新建一个数组，里面存放100个整数（1~100）。
+        var arr = [];
+        for (var i = 0; i < 100; i++) {
+            arr[i] = i + 1;
+            // console.log(arr[i]);
+        }
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
