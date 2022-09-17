@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.利用函数求任意两个数的最大值。
+        // const getMax = (x, y) => {
+        //     // if (x > y) {
+        //     //     return x;
+        //     // }
+        //     // return y;
+
+        //     return x > y ? x : y;
+        // }
+        // console.log(getMax(10000, 100));
+        // console.log(getMax(3, 90));
+
+
+        //2.利用函数求任意一个数组中的最大值。
+        const getArrMax = (arr) => {
+            let max = 0;
+            for (var i = 0; i <= arr.length - 1; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        console.log(getArrMax([2,1,6,0,9]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
