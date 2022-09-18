@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用函数封装方式，对数组冒泡排序
+        const ord = (arr) => {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var tep = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = tep;
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log(ord([5, 4, 3, 2, 1]));
+        console.log(ord([100,21,58,65,12,73,32]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
