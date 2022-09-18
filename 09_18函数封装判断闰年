@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //输入一个年份，判断是否为闰年（能被4整除且不能被100整除，或者能被400整除）
+        const getYear = (year) => {
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        var Year = prompt('要查询的年份：');
+        alert(getYear(Year));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
