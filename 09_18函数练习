@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.用户输入任意两个数字的任意算数运算，并能弹出运算结果。
+
+        // const Math = (x, y, z) => {
+        //     switch (z) {
+        //         case 1:
+        //             return x + y;
+        //         case 2:
+        //             return x - y;
+        //         case 3:
+        //             return x * y;
+        //         default:
+        //             return x / y;
+        //     }
+        // }
+        // let numbel1 = parseFloat(prompt('第一个数：'));
+        // let numbel2 = parseFloat(prompt('第二个数：'));
+        // let select = parseFloat(prompt('运算方法：\n1.+\n2.-\n3.*\n4./'));
+        // let re = Math(numbel1, numbel2, select);
+        // alert(re);
+
+        //2.用户输入任意两个数字的最大值，并能弹出运算结果。
+        // const getMax = (x, y) => { return x > y ? x : y }
+        // let numbel1 = prompt();
+        // let numbel2 = prompt();
+        // alert(getMax(numbel1, numbel2));
+
+        //3.用户输入任意三个数字的最大值，并能弹出运算结果。
+        // let numbel1 = prompt();
+        // let numbel2 = prompt();
+        // let numbel3 = prompt();
+        // const getMax = (x, y, z) => {
+        //     let tep = x > y ? x : y;
+        //     return tep > z ? tep : z;
+        // }
+        // alert(getMax(numbel1, numbel2, numbel3));
+
+        //4.用户输入一个数判断是否为素数（只能被1和自身整除的数），并弹出返回值。
+        let num = prompt();
+        let sum = 0;
+        const know = (x) => {
+            for (let i = 1; i <= num; i++) {
+                if (x % i == 0) {
+                    sum++;
+                }
+            }
+            if (sum == 2) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+        alert(know(num));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
