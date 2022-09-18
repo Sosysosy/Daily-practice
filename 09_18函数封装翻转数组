@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用函数封装方式，翻转任意个数元素。
+        // function getExchange() {
+        //     var i = 0;
+        //     var j = arguments.length - 1;
+        //     var tep = '';
+        //     while (i != j) {
+        //         tep = arguments[i];
+        //         arguments[i] = arguments[j];
+        //         arguments[j] = tep;
+        //         i++;
+        //         j--;
+        //     }
+        //     return arguments;
+        // }
+        // console.log(getExchange(1, 2, 3, 4, 5));
+        // console.log(getExchange('one', 'two', 'three', 'four', 'five'));
+
+        //利用函数封装方式，翻转任意一个数组。
+        //法1
+        // const getExchange = (arr) => {
+
+        //     var tep = '';
+        //     for (var i = 0; i < arr.length - 1 - i; i++) {
+        //         tep = arr[i];
+        //         arr[i] = arr[arr.length - 1 - i];
+        //         arr[arr.length - 1 - i] = tep;
+        //     }
+        //     return arr;
+        // }
+        // console.log(getExchange([1,2,3,4,5]));
+        // console.log(getExchange(['吃','穿','住','行']));
+
+        //法2：转到新数组
+        const getExchange=(arr)=>{
+            var newArr=[];
+            for(var i=arr.length-1;i>=0;i--){
+                newArr[newArr.length]=arr[i];
+            }
+            return newArr;
+        }
+        console.log(getExchange([1,2,3,4,5]));
+        console.log(getExchange(['嗯','哼','哈','嘿']));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
