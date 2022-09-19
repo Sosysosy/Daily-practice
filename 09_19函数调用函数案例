@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //用户输入年份，输出当前年份2月份的天数。
+        //闰年29天，平年28天。
+
+        const getYear = (Year) => {
+            if ((Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        const backDay = () => {
+            let Year = prompt('输入查询的年份：');
+            if (getYear(Year)) {
+                alert(Year + '年2月份的天数为29天');
+            } else {
+                alert(Year + '年2月份的天数为28天');
+            }
+        }
+        backDay();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
