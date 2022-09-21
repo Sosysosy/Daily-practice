@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建对象
+        //姓名：可可
+        //类型：阿拉斯加犬
+        //年龄：5
+        //颜色：棕红色
+        //技能：汪汪汪
+
+        //1.利用字面量创建对象
+        // let dog = {
+        //     name: '可可',
+        //     type: '阿拉斯加犬',
+        //     age: '5',
+        //     color: '棕红色',
+        //     power: function () {
+        //         console.log('汪汪汪');
+        //     }
+        // }
+
+        //2.利用 new Object 创建对象
+        let dog = new Object();
+        dog.name = '可可';
+        dog.type='阿拉斯加犬';
+        dog.age=5;
+        dog.color='棕红色';
+        dog.power=function(){
+            console.log('汪汪汪');
+        }
+
+        //3.利用构造函数创建对象
+
+        console.log(dog.name);     //调用对象属性方法1
+        console.log(dog['type']);  //调用对象属性方法2
+        dog.power();               //调用对象方法
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
