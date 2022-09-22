@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用构造函数创建两个英雄对象，函数中的公共部分包括：名字属性，类型属性，血量属性和攻击方式。
+        //英雄对象的信息：  
+        //廉颇：力量型 500血 攻击方式：近战
+        //后羿：射手型 100血 攻击方式：远程
+
+        function People(name, type, blood) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.war = function (method) {
+                console.log(method);
+            }
+        }
+        let lianPo = new People('廉颇', '力量型', 500); //调用函数返回的是一个对象
+        console.log(lianPo.name);
+        console.log(lianPo['type']);
+        console.log(lianPo.blood)
+        lianPo.war('近战');
+
+        let houYi = new People('后羿', '射手型', 100);
+        console.log(houYi.name);
+        console.log(houYi['type']);
+        console.log(houYi.blood);
+        houYi.war('远程');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
