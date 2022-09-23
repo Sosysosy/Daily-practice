@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var People = {
+            name: '小老头',
+            age: 18,
+            sex: '男'
+        }
+        for (var k in People) {      //for in 里面的变量一般使用K或者key
+            console.log(k);          //k得到的是属性名
+            console.log(People[k]);  //People[k]得到的是属性值
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
