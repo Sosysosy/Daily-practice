@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.创建一个电脑对象，要有颜色、重量、品牌、型号，可以看电影、听音乐、打游戏和敲代码。
+        // var Computer = {
+        //     color: '黑色',
+        //     weight: '300kg',
+        //     type: 'ASUS',
+        //     model: '2022',
+        //     mode: function () {
+        //         '看电影';
+        //         '听音乐';
+        //         '打游戏';
+        //         '敲代码';
+        //     }
+        // }
+        // for (var k in Computer) {
+        //     console.log(Computer[k]);
+        // }
+
+        //2.创建一个按钮对象，要包含宽、高、背景颜色和点击行为。
+        // var botton = new Object();
+        // botton.color = 'blue';
+        // botton.width = '3cm';
+        // botton.height = '2cm';
+        // botton.click = function () {
+        //     '干饭去！';
+        // }
+        // for (var k in botton) {
+        //     console.log(botton[k]);
+        // }
+
+        //3.创建一个车的对象，要有重量、颜色、牌子，可以载人、拉货和耕田。
+        var Car = {
+            weight: '1500kg',
+            color: '白色',
+            type: '马自达',
+            mode: function () {
+                '载人';
+                '拉货';
+                '耕田';
+            }
+        }
+        for (var k in Car){
+            console.log(Car[k]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
