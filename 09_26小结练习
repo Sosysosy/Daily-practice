@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.写一个函数，实现反转任意数组。
+        // function getArr(arr) {
+        //     var i = 0;
+        //     var j = arr.length - 1;
+        //     var tep = '';
+        //     while (i < j) {
+        //         tep = arr[i];
+        //         arr[i] = arr[j];
+        //         arr[j] = tep;
+        //         i++;
+        //         j--;
+        //     }
+        //     return arguments;
+        // }
+        // console.log(getArr([1, 2, 3, 4, 5]));
+
+        //2.写一个函数，实现对数字数组的排序。
+        function getOrder(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var tep = '';
+                        tep = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = tep;
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log(getOrder([3, 2, 4, 5, 1]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
