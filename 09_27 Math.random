@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Math.random()返回一个浮点数  [0,1)
+        console.log(Math.floor(Math.random() * 100));
+
+        //得到两个数之间的随机整数，且包含这两个数。
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min; //
+        }
+        console.log(getRandomInt(1, 100));
+
+        //随机点名
+        var people = ['张三', '李四', '王六', '小七', '八八'];
+        console.log(people[getRandomInt(0, people.length - 1)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
