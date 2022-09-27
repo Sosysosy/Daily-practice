@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //生成随机数字
+        //用户输入数字，若输入数字大于或小于生成数字，提示用户
+        //若等于生成数字，结束
+
+        var num = prompt('猜个数');
+        var one = Math.floor(Math.random() * 10) + 1;   //
+        console.log(one);
+        while (num != one) {
+            if (num > one) {
+                num = prompt('猜大了，再试一下');
+            } else {
+                num = prompt('猜小了，再试一下');
+            }
+        }
+        alert('猜对了！');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
