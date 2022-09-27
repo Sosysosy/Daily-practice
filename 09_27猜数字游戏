@@ -11,17 +11,32 @@
         //用户输入数字，若输入数字大于或小于生成数字，提示用户
         //若等于生成数字，结束
 
+        // var num = prompt('猜个数');
+        // var one = Math.floor(Math.random() * 10) + 1;   //
+        // console.log(one);
+        // while (num != one) {
+        //     if (num > one) {
+        //         num = prompt('猜大了，再试一下');
+        //     } else {
+        //         num = prompt('猜小了，再试一下');
+        //     }
+        // }
+        // alert('猜对了！');
+
+        //要求用户猜1——50之间的一个数，但是只有十次的机会
         var num = prompt('猜个数');
-        var one = Math.floor(Math.random() * 10) + 1;   //
-        console.log(one);
-        while (num != one) {
-            if (num > one) {
-                num = prompt('猜大了，再试一下');
-            } else {
-                num = prompt('猜小了，再试一下');
+        var random = Math.floor(Math.random() * 50) + 1;
+        console.log(random);
+        for (var i = 9; i >= 1; i--) {
+            if (num > random) {
+                num = prompt('猜大了，你还有' + i + '次机会哦');
+            } else if (num < random) {
+                num = prompt('猜小了，你还有' + i + '次机会哦');
+            }else {
+                alert('猜对了！');
+                break;
             }
         }
-        alert('猜对了！');
     </script>
 </head>
 
