@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //无参数则返回当前时间
+        var date=new Date(); //实例化
+        console.log(date);  
+        
+        //参数写法：数字型 2022,9,28  或者  字符串型 '2022-9-28 17:6:10'
+        var date1=new Date(2022,9,28);
+        console.log(date1);
+        
+        var date2=new Date('2022-9-28 17:6:10');
+        console.log(date2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
