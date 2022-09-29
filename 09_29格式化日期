@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //格式化日期 年月日
+        var date = new Date();
+        console.log(date.getFullYear());   //返回当前的年份
+        console.log(date.getMonth() + 1);      //返回月份小一个月 0-11 记得+1
+        console.log(date.getDate());       //返回当前几号
+        console.log(date.getDay());        //返回周几 0-6 周日为0 周一至周六为1-6
+
+        //写一个当前日期 格式
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var date1 = date.getDate();
+        var day = date.getDay();
+        var dayArr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        console.log('当前日期为：' + year + '年' + month + '月' + date1 + '日' + dayArr[day]);
+
+
+        //格式化日期 时分秒
+        // var date=new Date();
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+        //封装一个返回时分秒格式函数， 08：08：08
+        function nowTime() {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            //个位添加0格式
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            return hours + ':' + minutes + ':' + seconds;
+        }
+        console.log(nowTime());
+
+        console.log('当前时间为：' + year + '年' + month + '月' + date1 + '日' + dayArr[day] + ' ' + nowTime());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
