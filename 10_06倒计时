@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function countDown(time) {
+            var nowTime = +new Date();        //当前时间总的毫秒数
+            var inputTime = +new Date(time);  //输入时间总的毫秒数
+            var times = inputTime - nowTime;  //剩余时间总的毫秒数
+            times = times / 1000;             //剩余时间总的秒数
+            var d = parseInt(times / 60 / 60 / 24); //剩余的总的天数
+            var h = parseInt(times / 60 / 60 % 24); //剩余的总的小时
+            var m = parseInt(times / 60 % 60);      //剩余的总的分钟
+            var s = parseInt(times % 60);           //剩余的总的秒数
+            d = d < 10 ? '0' + d : d;
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            return d + '天' + h + '时' + m + '分' + s + '秒';
+        }
+        console.log('剩余时间：' + countDown('2022-10-8 08:00:00'));
+        console.log('预计时间:2022-10-8 08:00:00');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
