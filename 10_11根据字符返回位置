@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //字符串的所有方法，都不会修改字符串本身(字符串是不可变的)
+        var str='你是啷里格啷';
+        console.log(str.indexOf('啷'));
+        console.log(str.indexOf('啷',3)); //从索引号为3的位置开始查找
+
+        //lastIndexOf() 从后往前找
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
