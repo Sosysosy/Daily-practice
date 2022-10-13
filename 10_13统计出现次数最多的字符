@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //判断一个字符串'askjfwapjsfkdsfapwosd'中出现次数最多的字符，并统计其次数
+        var str = 'askjfwapjsfkdsfapwosd';
+        var obj = {};
+        for (var i = 0; i < str.length; i++) {
+            var position = str.charAt(i);
+            if (obj[position]) {
+                obj[position]++;    //每出现一次+1
+            }
+            else {
+                obj[position] = 1;
+            }
+        }
+        console.log(obj);
+        //遍历对象
+        var sum = 0;
+        var ch = '';
+        for (var k in obj) {
+            if (obj[k] > sum) {
+                sum = obj[k];       //保存属性值
+                ch = k;             //保存属性名
+            }
+        }
+        console.log('出现最多次数的字符为：'+ch);
+        console.log('出现的次数为：'+sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
