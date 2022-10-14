@@ -15,6 +15,9 @@
         //2.substr()
         var str2='改革春风吹满地！';
         console.log(str2.substr(4,4)); //(起始位置,截取个数)
+        
+        //3.slice(start,end) 从strat开始截取到end,end不取
+        //4.substring(start,end) 从strat开始截取到end,end不取,但是不接受负数
     </script>
 </head>
 <body>
