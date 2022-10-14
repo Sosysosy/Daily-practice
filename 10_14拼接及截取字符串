@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.concat()
+        var str='abcdefg';
+        console.log(str.concat('hijk'));
+        var str1='123';
+        console.log(str.concat(str1));
+
+        //2.substr()
+        var str2='改革春风吹满地！';
+        console.log(str2.substr(4,4)); //(起始位置,截取个数)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
