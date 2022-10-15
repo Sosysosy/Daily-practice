@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //给定一个字符串，如'asfSgsfdgtgd12343413g'，问题如下：
+        var str = 'asfSgsfdgtgd12343413g';
+
+        //1.字符串的长度
+        console.log(str.length);
+
+        //2.取出指定位置的字符，如0、4、9等
+        console.log(str.charAt(0));
+
+        //3.查找指定字符是否在字符串中存在，如s、8、g等
+        if (str.indexOf('s') != -1) {
+            console.log('存在');
+        } else {
+            console.log('不存在');
+        }
+
+        //4.替换指定的字符，如S替换为20，tg替换为b等
+        str = str.replace('S', '20');
+        console.log(str);
+
+        //5.截取指定开始位置到结束位置的字符串，如取得0-6的字符串
+        console.log(str.substr(0, 7));
+        console.log(str.slice(0, 7));
+
+        //6.找出字符串中出现次数最多的字符及出现次数
+        var obj = {};
+        var sum = 0;
+        var str1 = '';
+        for (var i = 0; i < str.length; i++) {
+            var position = str.charAt(i);
+            if (obj[position]) {
+                obj[position]++;
+            } else {
+                obj[position] = 1;
+            }
+        }
+        for (var k in obj) {
+            if (obj[k] > sum) {
+                sum = obj[k];
+                str1 = k;
+            }
+        }
+        console.log(sum, str1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
