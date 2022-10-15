@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.简单类型传参
+        //函数的形参也可以看作是一个变量，当我们把一个值类型变量作为参数传给函数的形参时，其实是把
+        //变量在栈空间里的值复制了一份给形参，那么在方法内部对形参做任何修改，都不会影响到外部变量(形参不影响实参)
+
+        //2.复杂类型传参
+        //函数的形参也可以看作是一个变量，当我们把引用类型变量传给形参时，其实是把变量在栈空间里保存的堆地址
+        //复制给了形参，形参和实参其实是保存在同一个堆地址，所以操作的是同一个对象(实参随着形参的改变而改变)
+
+        //类似C语言的指针
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
