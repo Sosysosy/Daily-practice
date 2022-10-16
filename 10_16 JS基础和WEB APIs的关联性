@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //1.JS组成：
+    //1.1 JavaScript基础： ECMAScript(javascript语法)
+    //1.2 WEB APIs: (1) DOM(页面文档对象模型)  (2) BOM(浏览器对象模型)
+
+    //2.JS基础阶段以及WEB APIs阶段
+    //2.1 JS基础阶段：
+    //学习的是ECMAScript标准规定的基本语法
+    //要求掌握JS基础语法
+    //只学习基本语法，做不了常用的网页交互效果
+    //目的是为了JS后面的课程打基础、做铺垫
+
+    //2.2   WEB APIs阶段：
+    //WEB APIs是W3C组织的标准
+    //WEB APIs主要学习DOM和BOM
+    //WEB APIs是我们JS所独有的部分
+    //主要学习页面交互功能
+    //需要使用JS基础的课程内容做基础
+
+    //JS基础学习ECMAScript基础语法为后面做铺垫，WEB APIs是JS的应用，大量使用JS基础语法做交互效果
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
