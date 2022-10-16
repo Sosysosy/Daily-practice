@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.API
+        //API(Application Programming Interface,应用程序编程接口)是一些预先定义的函数，目的是提供应用程序
+        //与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。
+        //简单理解为是给程序员提供的一种工具，以便能更轻松的实现想要完成的功能。
+
+        //2.WEB APIs
+        //WEB APIs是浏览器提供的一套操作浏览器功能和页面元素的API(BOM和DOM)
+        //现阶段主要针对于浏览器讲解常用的API，主要针对浏览器做交互效果
+
+        //3.总结
+        //3.1 API是为我们程序员提供的一个接口，帮助我们实现某种功能，会使用即可，不必纠结内部如何实现
+        //3.2 WEB API主要是针对浏览器提供的接口，主要针对于浏览器做交互效果
+        //3.3 WEB API一般都有输入和输出(函数的传参和返回值)，WEB API很多都是方法(函数)
+        //3.4 学习WEB API可以结合前面学习内置对象方法的思路学习
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
