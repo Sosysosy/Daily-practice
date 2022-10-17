@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        如何获取页面元素？
+           1.根据ID获取
+           2.根据标签名获取
+           3.通过HTML新增的方法获取
+           4.特殊元素获取
+    -->
+
+    <!-- 根据ID获取 -->
+    <!-- 使用getElementById()方法可以获取带有ID的元素对象 -->
+    <div id="date">2022-10-17</div>
+    <script>
+        //1.因为文档页面从上往下加载，所以script写到标签后面
+        //2.getElementById() get 获得 element 元素 by 通过 id 
+        //3.参数id是大小写敏感的字符串
+        //4.返回的是一个元素对象
+        var dater = document.getElementById('date');
+        console.log(dater);
+        console.log(typeof dater); //返回一个对象
+        //console.dir() 打印返回的元素对象，更便于查看里面的属性和方法
+        console.dir(dater);
+    </script>
+</body>
+
+</html>
