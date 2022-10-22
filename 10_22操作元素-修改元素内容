@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>显示时间</button>
+    <div>time</div>
+    <p>time1</p>
+    <script>
+        //Js的DOM操作可以改变网页内容、结构和样式，可以利用DOM操作元素来改变元素里面的内容、属性等
+        var btn = document.querySelector('button');
+        var div1 = document.querySelector('div');
+        // btn.onclick=function(){
+        //     div1.innerText='2022-10-22';
+        // }
+        function getDate(){
+            var date = new Date();
+            // div1.innerText=date;  //返回当前时间
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var date2 = date.getDay();
+            var hour = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            return  '现在是：' + year + '年' + month + '月' + day + '日星期' + date2 + ' ' + hour + ':' + minutes + ':' + seconds;
+        }
+
+        btn.onclick = function () {
+           
+            div1.innerText = getDate();
+        }
+
+        //去掉添加事件步骤
+        var p = document.querySelector('p');
+        p.innerText = getDate();
+    </script>
+</body>
+
+</html>
