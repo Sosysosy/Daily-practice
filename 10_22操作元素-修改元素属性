@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="bridge">bridge</button>
+    <button id="bird">bird</button>
+    <br>
+    <img src="../image/10_22.2.jpg" title="桥">
+    <script>
+        //修改元素属性
+        var bdg = document.getElementById('bridge');
+        var bd = document.getElementById('bird');
+        var img = document.querySelector('img');
+       
+        bd.onclick = function () {
+            img.src = '../image/10_22.jpg';
+            img.title='鹦鹉';
+        }
+        bdg.onclick = function () {
+            img.src = '../image/10_22.2.jpg';
+            img.title='桥';
+        }
+        
+    </script>
+</body>
+
+</html>
