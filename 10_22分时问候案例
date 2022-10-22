@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>上午好！</h1>
+    <br>
+    <img src="../image/上午日出.jpg">
+    <script>
+        //分时显示不同图片，显示不同问候语
+        //若上午时间打开页面，显示上午好和上午的图片
+        //若下午时间打开页面，显示下午好和下午的图片
+        //若晚上时间打开页面，显示晚上好和晚上的图片
+        var h1 = document.querySelector('h1');
+        var img = document.querySelector('img');
+        var date = new Date();
+        var time = date.getHours();
+        // var nun = 0;
+        console.log(time);
+        if (time <= 12 && time >= 6) {             //if(time<12)  这样写可能是因为从上到下执行代码，第一个判断条件被覆盖？
+            h1.innerHTML = '上午好！';
+            img.src = '../image/上午日出.jpg';
+        } else if (time > 12 && time <= 18) {      //if(time<18)
+            h1.innerHTML = '下午好！';
+            img.src = '../image/下午日落.jpg';
+        } else {
+            h1.innerHTML = '晚上好！';
+            img.src = '../image/夜晚.jpg';
+        }
+
+        // switch (num) {
+        //     case 1:
+        //         h1.innerHTML = '上午好！';
+        //         img.src = '../image/上午日出.jpg';
+        //         break;
+        //     case 2:
+        //         h1.innerHTML = '下午好！';
+        //         img.src = '../image/下午日落.jpg';
+        //         break;
+        //     case 3:
+        //         h1.innerHTML='晚上好！';
+        //         img.src='../image/夜晚.jpg';
+        //         break;
+        // } 呃呃，我为什么要写这么复杂，因为我只是个辣鸡码农！！！
+    </script>
+</body>
+
+</html>
