@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <p>
+        ABC
+        <span>321</span>
+    </p>
+    <script>
+        //innerText和innerHTML的区别：
+        //1.innerText不识别html标签,非标准,会将空格和换行去除
+        var div=document.querySelector('div');
+        div.innerText='<strong>123</strong>abc';
+
+        //2.innerHTML识别html标签,W3C标准,会保留空格和换行
+        div.innerHTML='<strong>123</strong>abc';
+
+        //这两个属性是可读写的，可以获取元素里面的内容
+        var p=document.querySelector('p');
+        console.log(p.innerText);
+        console.log(p.innerHTML);  //会保留空格、换行和html标签
+    </script>
+</body>
+</html>
