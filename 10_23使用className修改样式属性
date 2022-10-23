@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: white;
+        }
+        .new{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            font-size: 50px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">123</div>
+    <script>
+        //element.calssName 类名样式操作
+        var div=document.querySelector('div');
+        //当样式较多，功能较复杂时使用className操作
+        div.onclick=function(){
+            div.className='new';     //calssName会直接更改元素的类名，会覆盖原先的类名
+            //div.className='new first';
+            //这样可以保留原先的类名，多个类名有的属性都会存在
+        }
+    </script>
+</body>
+</html>
