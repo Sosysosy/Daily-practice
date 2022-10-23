@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div=document.querySelector('div');
+        div.onclick=function(){
+            //div.style 样式采取驼峰命名法
+            //js修改css样式操作，产生的是行类样式，权重比较高(行内比内嵌高)
+            this.style.backgroundColor='black';
+            this.style.height='200px';
+            //this 指向的是事件函数的调用者 div
+        }
+    </script>
+</body>
+</html>
