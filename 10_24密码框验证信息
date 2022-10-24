@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 600px;
+            margin: 100px auto;
+        }
+        .old{
+            font-size: 5px;
+            background: url(../image/提醒.png) no-repeat left center;
+            padding-left: 20px;
+        }
+        .err{
+            background-image: url(../image/认证失败.png) ;
+            color: red;
+        }
+        .ture{
+            background-image: url(../image/认证.png) ;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>密码设置：</p>
+        <input type="text">
+        <p  class="old">请输入6~16位密码</p>
+    </div>
+    <script>
+        //密码框格式提示错误信息
+        //用户若离开密码框，里面输入个数不是6-16，则提示错误信息，否则提示输入正确信息
+        var input = document.querySelector('input');
+        var p = document.querySelector('.old');
+            input.onblur = function () {
+                if (this.value.length < 6 || this.value.length > 16) {
+                  p.innerHTML='密码较短,仅支持6~16个字符';
+                  p.className='old err';
+                }else{
+                    p.innerHTML='密码格式正确';
+                    p.className='old ture';
+                }
+            }
+    </script>
+</body>
+
+</html>
