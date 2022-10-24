@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+</style>
+
+<body>
+    <button>开/关灯</button>
+    <script>
+        //操作元素时DOM核心内容
+        //操作元素：
+        //1.操作元素内容：innerText、innerHTML
+        //2.操作常见元素属性：src、href、title、alt等
+        //3.操作表单元素属性：type、value、disabled等
+        //4.操作元素样式属性：element.style、className
+
+        //作业：
+        //1.开关灯
+        var btn = document.querySelector('button');
+        var body=document.body;
+        var light = 0;
+        btn.onclick = function () {
+            if (light==0) {
+              body.style.backgroundColor='black';
+              light=1;
+            }else{
+                body.style.backgroundColor='white';
+                light=0;
+            }
+        }
+
+        //2.世纪佳缘 用户名 显示隐藏内容
+        //3.京东关闭广告
+        //4.新浪下拉菜单
+    </script>
+</body>
+
+</html>
