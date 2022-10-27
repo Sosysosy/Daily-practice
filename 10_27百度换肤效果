@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 设置背景填充 */
+            background: url(../image/10_22.2.jpg) no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="baidu">
+        <li><img src="../image/10_22.2.jpg" alt="" width="164px" height="102px"></li>
+        <li><img src="../image/上午日出.jpg" alt="" width="164px" height="102px"></li>
+        <li><img src="../image/下午日落.jpg" alt="" width="164px" height="102px"></li>
+        <li><img src="../image/河流.jpg" alt="" width="164px" height="102px"></li>
+    </ul>
+    <script>
+        var imgs = document.getElementsByTagName('img');
+        var body = document.body;
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {
+                body.style.backgroundImage = 'url(' + this.src + ')';     //backgroundImage只会修改图片，不会修改样式
+                // document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+    </script>
+</body>
+
+</html>
