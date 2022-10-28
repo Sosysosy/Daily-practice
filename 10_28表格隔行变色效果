@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    thead {
+        background-color: aqua;
+    }
+    table{
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>第一行</th>
+                <th>第二行</th>
+                <th>第三行</th>
+                <th>第四行</th>
+                <th>第五行</th>
+                <th>第六行</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>1</th>
+                <th>1</th>
+                <th>1</th>
+                <th>1</th>
+                <th>1</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>2</th>
+                <th>2</th>
+                <th>2</th>
+                <th>2</th>
+                <th>2</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>3</th>
+                <th>3</th>
+                <th>3</th>
+                <th>3</th>
+                <th>3</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>4</th>
+                <th>4</th>
+                <th>4</th>
+                <th>4</th>
+                <th>4</th>
+            </tr>
+            <tr>
+                <th>5</th>
+                <th>5</th>
+                <th>5</th>
+                <th>5</th>
+                <th>5</th>
+                <th>5</th>
+            </tr>
+            <tr>
+                <th>6</th>
+                <th>6</th>
+                <th>6</th>
+                <th>6</th>
+                <th>6</th>
+                <th>6</th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+        //给每个tr绑定事件
+        for (var i = 0; i < trs.length; i++) {
+            //鼠标经过事件 onmouseover
+            trs[i].onmouseover = function () {
+                this.style.backgroundColor = 'pink';
+            }
+            //鼠标离开事件 onmouseout
+            trs[i].onmouseout = function () {
+                this.style.backgroundColor = '';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
