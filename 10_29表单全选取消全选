@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,12 @@
     thead {
         background-color: aqua;
     }
-    table{
+
+    table {
         margin: 0 auto;
     }
 </style>
+
 <body>
     <table>
         <thead>
@@ -78,13 +81,27 @@
         </tbody>
     </table>
     <script>
-        var ted=document.getElementById('tedinput');
-        var tbds=document.getElementById('tbd').getElementsByTagName('input');
-        ted.onclick=function(){
-           for(var i=0;i<tbds.length;i++){
-               tbds[i].checked=this.checked;       //this.checked 可以得到当前复选框的选中状态 选中为true 未选中为false       
-           }                                       //将全选框与input选中状态统一
+        var ted = document.getElementById('tedinput');
+        var tbds = document.getElementById('tbd').getElementsByTagName('input');
+        ted.onclick = function () {
+            for (var i = 0; i < tbds.length; i++) {
+                tbds[i].checked = this.checked;       //this.checked 可以得到当前复选框的选中状态 选中为true 未选中为false       
+            }                                       //将全选框与input选中状态统一
+        }
+
+        //给每个复选框添加点击事件
+        for (var i = 0; i < tbds.length; i++) {
+            tbds[i].onclick = function () {
+                var flag = true;
+                for (var j = 0; j < tbds.length; j++) {        //点击复选框则判断一次每个复选框有无被选中
+                    if (!tbds[j].checked) {
+                        flag = false;
+                    }
+                }
+                ted.checked = flag;                            //全选中为true，否则为false，将结果给全选框
+            }
         }
     </script>
 </body>
+
 </html>
