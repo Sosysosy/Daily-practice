@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div getTime="21" data-index="123" data-list-name="sosy"></div>
+    <script>
+        var div=document.querySelector('div');
+        console.log(div.getTime);   //undefined 自定义属性不能直接通过元素属性获取
+        console.log(div.getAttribute('getTime')); 
+
+        //不易判断是内置属性还是自定义属性，所以H5新增了自定义属性：
+        //H5规定自定义属性以 data 开头作为属性名并赋值     如data-index='1'
+
+        //获取H5自定义属性： 只能获取以data开头的属性
+        //1.兼容性获取：element.getAttribute('data-index');
+        console.log(div.getAttribute('data-index'));
+        div.setAttribute('data-time',22);      //添加H5自定义属性
+
+        //2.H5新增element.dataset.index 或 element.dataset['index']     ie11才开始支持
+        console.log(div.dataset.index);  
+        console.log(div.dataset['index']);
+        console.log(div.dataset);               //dataset 看作H5以data开头的自定义属性的集合
+        console.log(div.dataset.listName);      //若属性名由多个 - 连接使用驼峰命名法
+    </script>
+</body>
+</html>
