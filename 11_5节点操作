@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.利用DOM提供的方法获取元素
+        
+        //2.利用节点层级关系获取元素
+        //(1).利用父子兄节点关系获取元素
+        //(2).逻辑性强，但兼容性稍差
+
+        //两种方法都可以获取元素节点，但节点操作更简单
+
+        //一般节点至少拥有nodeType(节点类型)、nodeName(节点名称)和nodeValue(节点值)这三个基本属性
+        //元素节点 nodeType 为 1
+        //属性节点 nodeType 为 2
+        //文本节点 nodeType 为 3 (文本节点包含文字、空格、换行等)
+        //在实际开发中，节点操作主要操作的是元素节点
+    </script>
+</body>
+</html>
