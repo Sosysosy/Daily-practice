@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+    </ol>
+    <script>
+        var ol = document.querySelector('ol');
+        //节点层级
+        //1.parentNode.firstChild 
+        //返回第一个子节点，找不到返回null。包含元素节点、文本节点等等
+        console.log(ol.firstChild);
+        //2.parentNode.lastChild
+        console.log(ol.lastChild);
+
+        //parentNode.firstElementChild 
+        //有兼容性问题，IE9以上才支持
+        //返回第一个子元素节点 找不到返回null
+        console.log(ol.firstElementChild);
+        //parentNode.lastElementChild
+        console.log(ol.lastElementChild);
+
+        //实际开发：既没有兼容性问题又便捷
+        console.log(ol.children[0]);  //返回第一个子元素节点
+        console.log(ol.children[ol.children.length - 1]);  //返回最后一个子元素节点
+
+    </script>
+</body>
+
+</html>
