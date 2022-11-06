@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+       <span class="in_box">close</span>
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        //1.父节点 parentNode
+        var close=document.querySelector('.in_box');
+        //parentNode返回的是最近的一个父节点
+        //如果指定的节点没有父节点则返回null
+        console.log(close.parentNode);
+
+        //2.子节点 
+        var ul=document.querySelector('ul');
+        //(1).childNodes(标准)
+        //parentNode.childNodes返回包含指定节点的子节点的集合
+        console.log(ul.childNodes);                //返回所有节点的集合 包含 元素节点、文本节点等
+        console.log(ul.childNodes[0].nodeType);    //返回3 为文本节点
+        console.log(ul.childNodes[1].nodeType);    //返回1 为元素节点
+        //若只想获得元素节点，则需专门处理。所以一般不提倡使用childNodes    
+        //(2).children(非标准)
+        //parentNode.children返回所有的子元素节点，其余节点不返回
+        console.log(ul.children);
+        console.log(ul.children[0].nodeType);      //返回1 为元素节点
+    </script>
+</body>
+</html>
