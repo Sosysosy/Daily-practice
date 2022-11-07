@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>123</li>
+    </ul>
+    <script>
+        //1.创建节点
+        //document.creatElement('tagName')
+        var li = document.createElement('li');
+
+        //2.添加节点
+        //node.appendChild(child)
+        //node 父级 child 子级
+        //将一个节点添加至指定父节点的子节点列表末尾
+        var ul = document.querySelector('ul');
+        ul.appendChild(li);
+
+        //node.insertBefore(child,指定元素)
+        //将一个节点添加至父节点的指定子节点前面
+        var li2 = document.createElement('li');
+        ul.insertBefore(li2, ul.children[0]);
+
+        //页面添加新元素：1.创建元素  2.添加元素
+    </script>
+</body>
+
+</html>
