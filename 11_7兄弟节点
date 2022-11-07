@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>p</p>
+    <div>div</div>
+    <span>span</span>
+    <script>
+        var div = document.querySelector('div');
+        //1.兄弟节点
+        //nextSibling 
+        //返回的是下一个兄弟节点 包含元素节点、文本节点等等
+        console.log(div.nextSibling);
+        //previousSibling
+        //返回上一个兄弟节点
+        console.log(div.previousSibling);
+
+        //2.兄弟元素节点 有兼容性问题 IE9以上才支持
+        //nextElementSibling
+        //返回下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        //previousElementSibling
+        console.log(div.previousElementSibling);
+        //解决兼容性问题：自己封装一个兼容性的函数
+    </script>
+</body>
+
+</html>
