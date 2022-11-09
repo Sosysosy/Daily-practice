@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li {
+        background-color: greenyellow;
+        margin: 10px;
+        text-align: center;
+    }
+ul{
+    margin: 0;
+    padding: 0;
+}
+    .say {
+
+        height: 100px;
+    }
+</style>
+
+<body>
+    <input type="text" class="say" placeholder="留言内容：">
+    <input type="button" value="发布">
+    </br>
+    <ul>
+
+    </ul>
+    <script>
+        var ipt = document.querySelectorAll('input');
+        var ul = document.querySelector('ul');
+        ipt[1].onclick = function () {
+            // 创建li
+            var li = document.createElement('li');
+            // 将文本框内容给li
+            li.innerHTML = ipt[0].value;
+            // 留言框动态变化
+            li.style.width = ipt[0].value.length * 18 + 'px';
+            // 添加li
+            // ul.appendChild(li);
+            ul.insertBefore(li,ul.children[0]);
+            // 清空输入文本框
+            ipt[0].value='';
+        }
+    </script>
+</body>
+
+</html>
