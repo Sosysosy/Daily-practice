@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        width: 500px;
+        margin: 100px auto;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    td,
+    th {
+        border: 1px solid #333;
+    }
+
+    thead tr {
+        height: 40xp;
+        background-color: #ccc;
+    }
+
+    tbody tr th {
+        font-weight: normal;
+    }
+</style>
+
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var datas = [
+            { name: '田田田', subject: '金融', score: '90'},
+            { name: '甜甜甜', subject: '管理', score: '95'},
+            { name: '田佳芊', subject: '数学', score: '19'},
+            { name: '易大侠', subject: 'js', score: '0'},
+        ]
+        var tbodys = document.querySelector('tbody');
+        for (var i = 0; i < datas.length; i++) {
+            //动态生成列
+            var tr = document.createElement('tr');
+            tbodys.appendChild(tr);
+            //动态生成单元格
+            for (var k in datas[i]) {
+                var td = document.createElement('td');
+                td.innerHTML=datas[i][k];                //赋值
+                tr.appendChild(td);
+            }
+            //生成删除单元格
+            var td=document.createElement('td');
+            td.innerHTML="<a href='javascript:;'>删除</a>"
+            tr.appendChild(td);
+        }
+        //删除操作
+        var a=document.querySelectorAll('a');
+            for(var i=0;i<a.length;i++){
+               a[i].onclick=function(){
+                tbodys.removeChild(this.parentNode.parentNode);    //注意这里的层级关系
+               }
+            }
+    </script>
+</body>
+
+</html>
