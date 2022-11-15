@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="inner"></div>
+    <script>
+        var inner = document.querySelector('.inner');
+        //innerHTML字符串拼接形式
+        // for (var i = 0; i < 100; i++) {
+        //     inner.innerHTML += '<a href="#">百度</a>';
+        // }
+
+        //innerHTML数组形式
+        var arr = [];
+        for (var i = 0; i < 100; i++) {
+            arr.push('<a href="#">百度</a>');
+        }
+        inner.innerHTML=arr.join('');
+
+        //1.document.write 是直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘
+        //2.innerHTML 是将内容写入某个DOM节点，不会导致页面全部重绘
+        //3.innerHTML 创建多个元素效率更高(不要拼接字符串，采取数组形式拼接)，结构稍微复杂
+        //4.createElement 创建多个元素效率稍低一点，但是结构更清晰
+
+        //不同浏览器下，innerHTML(数组拼接形式)效率要比creatElement高
+    </script>
+</body>
+
+</html>
