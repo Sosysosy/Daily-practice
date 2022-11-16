@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button>传统注册事件</button>
+<button>方法监听注册事件</button>
+
+<body>
+    <script>
+        var btns=document.querySelectorAll('button');
+
+        //1.传统注册方式：
+        //利用on开头的事件：onclick
+        //特点：同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数会覆盖前面注册的处理函数
+        btns[0].onclick=function(){
+            alert('1');
+        }
+        btns[0].onclick=function(){  //会覆盖前面的
+            alert('2');
+        }
+
+        //2.方法监听注册方式：
+        //W3C标准 推荐方式
+        //addEventListener()是一个方法
+        //IE9之前不支持此方法，可使用attachEvent()代替
+        //特点：同一个元素同一个事件可以注册多个监听器
+        //按注册顺序依次执行
+
+        //eventTarget.addEventListener(type,listener[,useCapture])
+        //eventTarget(目标对象)
+        //type:事件类型字符串，如click、mouseover等，注意这里不要带on
+        //listener:事件处理函数,事件发生时，会调用该监听函数
+        //useCapture:可选参数，布尔值,默认为false
+        btns[1].addEventListener('click',function(){
+            alert('123');
+        })
+        btns[1].addEventListener('click',function(){
+            alert('321');
+        })
+    </script>
+</body>
+
+</html>
