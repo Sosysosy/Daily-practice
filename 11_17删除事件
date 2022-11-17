@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>传统删除事件方式</div>
+    <div>方法监听删除方式</div>
+    <script>
+        var divs = document.querySelectorAll('div');
+        //1.传统删除事件方式
+        //eventTarget.onclick=null;
+        divs[0].onclick = function () {
+            alert('传统删除事件方式');
+            divs[0].onclick = null;
+        }
+
+        //2.方法监听删除方式
+        //eventTarget.removeEventListener(type,listener[,useCapture]);
+        divs[1].addEventListener('click',fn);        //fn不需要添加小括号
+        function fn(){
+            alert('方法监听删除方式');
+            divs[1].removeEventListener('click',fn);
+        }
+    </script>
+</body>
+
+</html>
