@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //窗口加载事件
+        //window.onload = function(){}
+        //window.onload是窗口(页面)加载事件，当文档内容完全加载完成会触发该事件(包括图像、脚本文件、CSS文件等)，就调用的处理函数
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('页面加载事件！');
+            })
+        })
+
+        //document.addEventListener('DOMContentLoaded',function(){})
+        //DOMContentLoaded事件触发时，仅当DOM加载完成，不包括样式表、图片、flash等
+        //IE9以上才支持
+        //如果页面的图片很多的话，从用户访问到onload触发可能需要较长的时间，交互效果就不能实现，、
+        //必然影响用户体验，此时用DOMContentLoaded事件比较合适
+        document.addEventListener('DOMContentLoaded', function () {
+            alert('DOMContentLoaded');
+        })
+    </script>
+    <button>页面加载事件</button>
+</body>
+
+</html>
