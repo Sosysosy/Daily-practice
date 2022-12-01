@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //BOM(Browser Object Model)浏览器对象模型，它提供了独立于内容而与浏览器窗口进行交互的对象，
+        //其核心对象是window
+        //BOM由一系列的对象构成，且每个对象都提供了很多方法和属性
+        //BOM缺乏标准
+
+        //BOM的构成：
+        //window对象是浏览器的顶级对象，它具有双重角色
+        //1.它是JS访问浏览器窗口的一个接口
+        //2.它是一个全局对象。定义在全局作用域中的变量、函数都会变成window对象的属性和方法
+        
+    </script>
+</body>
+</html>
