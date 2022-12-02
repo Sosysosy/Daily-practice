@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            background-color: steelblue;
+            margin-top: 200px;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>注意!这是个广告!5秒后关闭</h2>
+    </div>
+    <script>
+        //setTimeout()这个调用函数我们也称为回调函数callback
+        //普通函数是按照代码顺序直接调用
+        //而这个函数，需要等待时间，时间到了才去调用这个函数，因此称为回调函数
+        //element.onclick=function()里面的函数也是回调函数
+
+        var div = document.querySelector('div');
+        setTimeout(function(){
+            div.style.display='none';
+        },5000);
+    </script>
+</body>
+
+</html>
