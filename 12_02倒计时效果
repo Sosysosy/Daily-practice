@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            background-color: black;
+            color: white;
+            margin: 10px;
+            padding: 50px;
+            font-size: 70px;
+        }
+
+        div {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        div p {
+            margin: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>距离2022-12-3 08:00:00还有:</p>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+        var spans = document.querySelectorAll('span');
+        var needTime = +new Date('2022-12-3 08:00:00'); //目标时间
+        Time(); //先调用一次函数，防止第一次刷新页面有空白
+        setInterval(Time, 1000);
+        function Time() {
+            var nowTime = +new Date(); //获取当前时间的总毫秒数
+            var time = needTime - nowTime;
+            times = time / 1000;       //剩余时间的秒数
+            var hour = parseInt(times / 60 / 60 % 24);
+            var minute = parseInt(times / 60 % 60);
+            var second = parseInt(times % 60);
+            //时间格式：为个位数则+0
+            hour = hour < 10 ? '0' + hour : hour;
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+            //替换内容
+            spans[0].innerHTML = hour;
+            spans[1].innerHTML = minute;
+            spans[2].innerHTML = second;
+        }
+    </script>
+</body>
+
+</html>
