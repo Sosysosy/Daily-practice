@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    手机号码：<input type="text" value="">
+    <button>获取验证码</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click',function(){
+            btn.disabled=true;
+            var numbel=60;
+            var time=setInterval(function(){
+               if(numbel==0){
+                 btn.disabled=false;
+                 clearInterval(time);
+                 btn.innerHTML='获取验证码';
+               }else{
+                btn.innerHTML= '请在' + numbel + '秒后重试';
+                numbel--;
+               }
+            },1000)
+        })
+
+
+        // btn.addEventListener('click', function () {
+        //     btn.disabled=true;
+        //     var numbel = 3;
+        //    var time= setInterval(function () {
+        //         numbel--;
+        //         btn.innerHTML = '请' + numbel + '秒后重试';
+        //     }, 1000)
+        //     setTimeout(function(){
+        //         btn.disabled=false;
+        //         clearInterval(time);
+        //         btn.innerHTML='获取验证码';
+        //     },3000)
+        // })
+    </script>
+</body>
+
+</html>
