@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JS是单线程
+        // Js语言的一大特点就是单线程，也就是说，同一时间只能做同一件事
+        //单线程就意味着所有任务需要排队，前一个任务结束才会执行下一个任务。这样所导致的问题是：如果JS执行的时间过长，
+        //这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞的感觉。
+
+        console.log(1);
+        setTimeout(function(){
+            console.log(3);
+        },1000)
+        console.log(2);
+        //结果为:1 2 3
+
+        //同步与异步：
+        //允许JS创建多个线程。于是出现同步与异步。
+        //1.同步
+        //前一个任务结束后在执行后一个任务，程序的执行顺序与任务的排列顺序是一致的、同步的。
+        //2.异步
+        //前一个任务执行的时间会花费较长时间，所以在执行这个任务的同时还可以去处理其他事情。
+        //本质区别：这条流水线上各个流程的执行顺序不同。
+    </script>
+</body>
+</html>
