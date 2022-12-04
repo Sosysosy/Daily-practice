@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        //更改当前URL实现页面跳转
+        // location.href='http://www.baidu.com';
+
+        var div = document.querySelector('div');
+        var numbel = 5;
+        setInterval(function () {
+            if (numbel === 0) {
+                location.href = 'http://www.baidu.com';
+            } else {
+                div.innerHTML = numbel + '秒后跳转到百度';
+                numbel--;
+            }
+        }, 1000)
+
+        // setTimeout(function(){
+        //     location.href='http://www.baidu.com';
+        // },5000)
+    </script>
+</body>
+
+</html>
