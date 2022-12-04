@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+//login.html页面
+<body>
+    <form action="index.html">
+        用户名：<input type="text" name="username" id="">
+        <input type="submit" value="登录">
+    </form>
+</body>
+//index.html页面
+<body>
+    <div>
+        <h2></h2>
+        <p>欢迎</p>
+    </div>
+    <script>
+        // 获取search参数
+        var query = location.search;
+        console.log(query);
+        // 去掉'?'
+        var query2 = query.substr(1);
+        console.log(query2);
+        // 利用'='将字符串分割
+        var arr = query2.split('=');
+        console.log(arr);
+
+        var h2 = document.querySelector('h2');
+        h2.innerHTML = arr[1];
+    </script>
+</body>
+</html>
