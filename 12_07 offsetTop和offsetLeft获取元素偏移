@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            position:relative;
+            background-color: aqua;
+            margin: 100px;
+            height: 100px;
+            width: 100px;
+        }
+        .son{
+            background-color: orangered;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        //offset 
+        //获取元素距离带有定位父元素的位置
+        //获取元素自身的高度宽度
+        //返回的数值都不带单位
+        var father=document.querySelector('.father');
+        console.log(father.offsetTop);
+        console.log(father.offsetLeft);
+
+        var son=document.querySelector('.son');
+        //以带有定位的父元素为准 若无父元素或父元素无定位 则以body为准
+        console.log(son.offsetTop);
+    </script>
+</body>
+</html>
