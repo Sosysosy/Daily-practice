@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        .login {
+            height: 280px;
+            width: 500px;
+            background-color: white;
+            margin-top: 200px;
+            margin-left: 500px;
+            display: none;
+            box-shadow: 0 0 50px 3px rgba(250, 250, 250, 0.7);
+            cursor: move;
+        }
+
+        form {
+            padding-top: 1px;
+            padding-left: 20px;
+        }
+
+        .password,
+        .username {
+            width: 300px;
+            height: 40px;
+            border-style: ridge;
+            border-color: lightgray;
+        }
+
+        form div {
+            margin-left: 16px;
+        }
+
+        .button {
+            margin-left: 130px;
+            margin-top: 30px;
+            width: 200px;
+            height: 45px;
+        }
+
+        form h4 {
+            margin-left: 190px;
+            margin-top: 0px;
+        }
+
+        form span {
+            margin-left: 460px;
+        }
+
+        .login_color {
+            background-color: black;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            position: fixed;
+            z-index: -1;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="javascript:;">
+        <h2>点击弹出登录框</h2>
+    </a>
+    <div class="login">
+        <form action="">
+            <span>×</span>
+            <div class="title">
+                <h4>登录会员</h4>
+            </div>
+            <div>用户名：<input type="text" class="username" placeholder="请输入用户名"></div><br>
+            用户密码：<input type="password" class="password" placeholder="请输入用户密码"><br>
+            <input type="submit" value="登录" class="button">
+        </form>
+    </div>
+    <div class="login_color"></div>
+    <script>
+        var span = document.querySelector('span');
+        var login = document.querySelector('.login');
+        var bg = document.querySelector('.login_color');
+        var a = document.querySelector('a');
+        span.addEventListener('click', function () {
+            login.style.display = 'none';
+            bg.style.display = 'none';
+        })
+        a.addEventListener('click', function () {
+            login.style.display = 'block';
+            bg.style.display = 'block';
+        })
+        //模态框拖拽效果
+        //1.鼠标按下 获取坐标
+        login.addEventListener('mousedown', function (e) {
+            var x = e.pageX - login.offsetLeft;
+            var y = e.pageY - login.offsetTop;
+            //2.鼠标移动
+            document.addEventListener('mousemove', move)
+            function move(e) {
+                login.style.marginLeft = e.pageX - 10 - x + 'px';     //-10   -50不知道哪里的偏差。。。
+                login.style.marginTop = e.pageY - 50 - y + 'px';
+            }
+            //3.鼠标弹起 事件停止
+            document.addEventListener('mouseup', function () {
+                document.removeEventListener('mousemove', move)
+            })
+        })
+
+    </script>
+</body>
+
+</html>
