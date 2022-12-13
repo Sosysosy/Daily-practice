@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            border: 10px solid black ;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div=document.querySelector('div');
+
+        //1. element.clientTop 返回元素上边框的大小
+        console.log(div.clientTop);
+        //2. element.clientLeft 返回元素左边框的大小
+        console.log(div.clientLeft);
+        //3. element.clientWidth 返回自身包括padding、内容区的宽度，不包含边框，返回数值不带单位
+        console.log(div.clientWidth);
+        //4. element.clientHeight 返回自身包括padding、内容区的高度，不包含边框，返回数值不带单位
+        console.log(div.clientHeight);
+
+        // client与offset最大的区别就是不包含边框
+    </script>
+</body>
+</html>
